@@ -1,5 +1,5 @@
 # How to Set Up an Email-Receiving Pipeline Cost-Effectively
-/Users/mosuleiman/Desktop/AWS Hands-on Projects/Compute/Image.png
+![Image](https://github.com/Sulemoore/AWS-Projects/assets/101164153/e8fde4cb-40eb-4789-8567-e80e096f521e)
 
 
 
