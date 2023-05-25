@@ -52,18 +52,33 @@ The architecture for this module is straightforward. All of your static web cont
 ## Step 1: Select Region
 1. This web application can be deployed in any AWS Region that supports all the services used in this application, which include AWS Amplify, AWS CodeCommit, Amazon Cognito, AWS Lambda, Amazon API Gateway, and Amazon DynamoDB.
 
+![Screenshot 2023-05-24 at 9 13 11 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/38b4236e-e6f0-4c53-bac1-0b8daca55f93)
+
+
 ## Step 2: Create a Git repository
 You have two options to manage the source code for this module: AWS CodeCommit (included in the AWS Free Tier) or GitHub. In this tutorial, we will use CodeCommit to store our application code, but you can do the same by creating a repository on GitHub.
 
 a. Open the AWS CodeCommit console
+![Screenshot 2023-05-24 at 9 18 28 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/18480823-d760-4f0e-9396-152ba7056490)
+
 b. Select Create Repository
 c. Set the Repository name to "wildrydes-site"
 d. Select Create
+![Screenshot 2023-05-24 at 9 18 49 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/8420e669-c01a-405f-8532-3f0de3ef81c5)
+
+d. Select Create
 e. Now that the repository is created, set up an IAM user with Git credentials in the IAM console following these instructions.
+![Screenshot 2023-05-24 at 9 19 13 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/bd4a9efd-3798-47b2-a103-c3301735b97a)
+
 f. Back in the CodeCommit console, from the Clone URL dropdown, select Clone HTTPS
 g. From a terminal window run git clone and the HTTPS URL of the repository:
+<img width="571" alt="Screenshot 2023-05-24 at 9 27 18 PM" src="https://github.com/Sulemoore/AWS-Projects/assets/101164153/263cce5d-2578-406f-af79-622503bb8730">
+
 
 Note: You may need to generate HTTPS Git credentials if you have not done so.
+![Screenshot 2023-05-24 at 9 27 38 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/17c01248-aabe-46fe-a342-387d8b6766d7)
+<img width="843" alt="Screenshot 2023-05-24 at 9 35 22 PM" src="https://github.com/Sulemoore/AWS-Projects/assets/101164153/d19cf876-168c-4429-a5a8-9c7953bdaeed">
+
 
 $ git clone https://git-codecommit.us-east1.amazonaws.com/v1/repos/wildrydes-site
 Cloning into 'wildrydes-site'...
@@ -101,17 +116,33 @@ To https://git-codecommit.us-east-1.amazonaws.com/v1/repos/wildrydes-site
 ## Step 4: Enable Web Hosting with the AWS Amplify console
 
 a. Launch the Amplify Console console page
+![Screenshot 2023-05-24 at 9 49 29 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/0dbf60a2-4f76-4151-961c-d15f818b768f)
+![Screenshot 2023-05-24 at 9 49 46 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/f99937cc-d042-4fb4-91c6-9aa79ad22678)
+![Screenshot 2023-05-24 at 9 50 21 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/11855e58-6672-4b8c-a132-18898db9ec86)
+
 b. Click Get Started under Deploy with Amplify Console
 c. Go to New App on the top right and choose Host Web App
 d. Select CodeCommit under Get started with Amplify Hosting
+![Screenshot 2023-05-24 at 9 50 48 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/897a032d-9446-4176-92a0-d24d780c8197)
+
 e. Select the Repository service provider used today and select Continue
 f. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account
 g. From the dropdown, select the Repository and Branch you just created and select Next
+![Screenshot 2023-05-24 at 9 52 18 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/312fbde3-6f1c-4a75-a675-b688f68f83f9)
+
 h. On the Configure build settings page, leave all the defaults, Select Allow AWS Amplify to automatically deploy all files hosted in your project root directory and select Next.
+![Screenshot 2023-05-24 at 9 53 45 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/b1472a45-cac5-4641-88bf-c1887381b20e)
+
 i. On the "Review" page select Save and deploy
+![Screenshot 2023-05-24 at 9 54 22 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/248448d4-1fbe-4b4e-9a1b-8fd0d04e2b7b)
+
 j. The process takes a couple of minutes for Amplify Console to create the necessary resources and to deploy your code.
+![Screenshot 2023-05-24 at 9 54 55 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/553b703d-0879-45bb-8e54-1793562288df)
+
 
 -Once completed, click on the site image to launch your Wild Rydes site.
+![Screenshot 2023-05-24 at 9 57 11 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/6ef9e521-9dfe-4868-a99b-227f97d91683)
+
 -If you click on the link for Master you'll see the build and deployment details related to your branch, and screenshots of the app on various devices:
 
 ## Step 5: Modify Your Site
@@ -144,6 +175,8 @@ In this module, you've created static website which will be the base for our Wil
 ## Module 2: User Management (create an Amazon Cognito user pool to manage your users' accounts)
 
 In this module you'll create an Amazon Cognito user pool to manage your users' accounts. You'll deploy pages that enable customers to register as a new user, verify their email address, and sign into the site.
+![Screenshot 2023-05-24 at 10 15 09 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/d369a63b-590f-4ee0-8cd5-6c069e0e5758)
+
 
 When users visit your website they will first register a new user account. For the purposes of this workshop we'll only require them to provide an email address and password to register. However, you can configure Amazon Cognito to require additional attributes in your own applications.
 
@@ -157,16 +190,30 @@ Amazon Cognito provides two different mechanisms for authenticating users. You c
 a. In the AWS Console, enter Cognito in the search bar and select Cognito from the search results. 
 b. Choose Create user pool.
 c. On the Configure sign-in experience page, in the Cognito user pool sign-in options section, select User name. Keep the defaults for the other settings, such as Provider types in the Authentication providers section. Choose Next.
+![Screenshot 2023-05-24 at 10 16 13 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/2c1151ca-7d6e-45cb-bae9-1a1603bdb362)
+
 d. On the Configure security requirements page, keep the Password policy mode as Cognito defaults. You can choose to configure multi-factor authentication (MFA) or choose No MFA and keep other configurations as default. Choose Next.
+![Screenshot 2023-05-24 at 10 18 31 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/25f30fb3-2805-44dc-9f54-5d1e3e9f253b)
+
 e. On the Configure sign-up experience page, keep everything as default. Choose Next.
+![Screenshot 2023-05-24 at 10 19 49 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/ad089f61-c9db-4a46-9978-bc124f9a926f)
+
 f. On the Configure message delivery page, for Email provider, confirm that Send email with Amazon SES - Recommended is selected. In the FROM email address field, select an email address that you have verified with Amazon SES, following these instructions from the Amazon SES Developer Guide.
+![Screenshot 2023-05-24 at 10 24 20 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/82854bc8-7a5f-49c8-9c99-1057f9545385)
+![Screenshot 2023-05-24 at 10 28 54 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/67cef528-f464-4199-8faf-1953662642ac)
+
 g. On the Integrate your app page, provide a name for your user pool such as WildRydes. Under Initial app client, give the app client a name such as WildRydesWebApp and keep other settings as default.
 h. On the Review and create page, choose Create user pool.
+![Screenshot 2023-05-24 at 10 30 28 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/37bcd7fc-a7d3-4b7d-bf8e-784ea1676430)
+
 i. Note the Pool ID and the App client ID on the Pool details page of your newly created user pool.
 
 ## Step 2: Update the Website Config
 
 The /js/config.js file contains settings for the user pool ID, app client ID and Region. Update this file with the settings from the user pool and app you created in the previous steps and upload the file back to your bucket
+
+a. From your local machine, open `wildryde-site/js/config.js` in a text editor of your choice.
+![Screenshot 2023-05-24 at 10 44 43 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/2b583e8a-4ac7-4ee8-b5ff-e7c9f4f4d90b)
 
 a. From your local machine, open `wildryde-site/js/config.js` in a text editor of your choice.
 
@@ -224,6 +271,8 @@ i. You should see a user corresponding to the email address that you submitted t
 j. Choose Confirm user to finalize the account creation process.
 
 k. After confirming the new user using either the /verify.html page or the Cognito console, visit /signin.html and log in using the email address and password you entered during the registration step.
+![Screenshot 2023-05-24 at 10 30 28 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/ea77d1cb-8152-44ee-9e50-c23d2e2ce91a)
+
 
 l. If successful you should be redirected to /ride.html. You should see a notification that the API is not configured.
 
@@ -247,10 +296,16 @@ After you've created the table, note the ARN for use in the next step.
 
 a. From the AWS Management Console, choose Services then select DynamoDB under Databases.
 b. Choose Create table.
+![Screenshot 2023-05-24 at 11 03 56 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/946e7857-68b3-4f3e-8df5-1438cbc0129c)
+
+ ![Screenshot 2023-05-24 at 11 04 36 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/3b30b7fb-15ce-4667-96dd-59300a465f6f)
+
 c. Enter Rides for the Table name. This field is case sensitive.
 d. Enter RideId for the Partition key and select String for the key type. This field is case sensitive.
 e. Check the Use default settings box and choose Create. Navigate to the Tables page in the DynamoDB console and wait for your table creation to complete. Once it is completed, select your table name.
 f. Scroll to the bottom of the Overview section of your new table and choose Additional info. Note the ARN. You will use this in the next section.
+![Screenshot 2023-05-24 at 11 06 53 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/57f8547a-d413-4687-8011-860c98895779)
+
 
 ## Step 2: Create an IAM role for your Lambda function
 
@@ -262,30 +317,44 @@ Attach the managed policy called AWSLambdaBasicExecutionRole to this role to gra
 a. From the AWS Management Console, click on Services and then select IAM in the Security, Identity & Compliance section.
 
 b. Select Roles in the left navigation pane and then choose Create Role.
+![Screenshot 2023-05-24 at 11 09 32 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/bbd02bd6-1840-48f7-9f0c-73516dc3307d)
+
 
 c. Underneath Trusted Entity Type, select AWS service. For Use case, select Lambda, then choose Next.
+![Screenshot 2023-05-24 at 11 09 57 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/b560ab51-06d5-4f81-aa3a-82e0fd8779a6)
+
 
 Note: Selecting a role type automatically creates a trust policy for your role that allows AWS services to assume this role on your behalf. If you were creating this role using the CLI, AWS CloudFormation or another mechanism, you would specify a trust policy directly.
 
 d. Begin typing AWSLambdaBasicExecutionRole in the Filter text box and check the box next to that role.
 
 e. Choose Next Step.
+![Screenshot 2023-05-24 at 11 11 51 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/2237ca07-10ae-4291-9c1f-464a54289f57)
+
 
 f. Enter WildRydesLambda for the Role Name. Keep other parameters as default.
 
 g. Choose Create Role.
+![Screenshot 2023-05-24 at 11 12 20 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/560507cf-7868-4895-8521-846075771b82)
+
 
 h. Type WildRydesLambda into the filter box on the Roles page and choose the role you just created.
 
 i. On the Permissions tab, on the left under Add permissions, choose Create Inline Policy.
+![Screenshot 2023-05-24 at 11 15 09 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/bae90a3b-3b75-4bfa-be2b-3cb92df880fc)
+
 
 j. Select Choose a service.
+![Screenshot 2023-05-24 at 11 15 47 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/c00d9ff2-dd7d-4cad-9cda-cdcba935f4d9)
+
 
 k. Begin typing DynamoDB into the search box labeled Find a service and select DynamoDB when it appears..
 
 l. Choose Select actions.
 
 m. Begin typing PutItem into the search box labeled Filter actions and check the box next to PutItem when it appears.
+![Screenshot 2023-05-24 at 11 16 43 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/40fdb48e-c5f7-46f8-81e8-0b4304b99fc5)
+
 
 n. Select the Resources section.
 
@@ -294,12 +363,15 @@ o. With the Specific option selected, choose the Add ARN link in the table secti
 p. Paste the ARN of the table you created in the previous section in the Specify ARN for table field, and choose Add.
 
 q. Choose Review Policy.
+![Screenshot 2023-05-24 at 11 19 21 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/92bbdfe5-5f89-4298-9356-56b076fde913)
+
 
 r. Enter DynamoDBWriteAccess for the policy name and choose Create policy.
 
 ## Step 3: Create a Lambda Function for Handling requests
 
 AWS Lambda will run your code in response to events such as an HTTP request. In this step you'll build the core function that will process API requests from the web application to dispatch a unicorn. In the next module you'll use Amazon API Gateway to create a RESTful API that will expose an HTTP endpoint that can be invoked from your users' browsers. You'll then connect the Lambda function you create in this step to that API in order to create a fully functional backend for your web application.
+![Screenshot 2023-05-24 at 11 21 43 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/cff70038-33be-4730-b3a2-8f6d73c2e50a)
 
 Use the AWS Lambda console to create a new Lambda function called RequestUnicorn that will process the API requests. Use the provided requestUnicorn.js example implementation for your function code. Just copy and paste from that file into the AWS Lambda console's editor.
 
@@ -319,6 +391,7 @@ f. Ensure Use an existing role is selected from the Change default execution rol
 g. Select WildRydesLambda from the Existing Role dropdown.
 
 h. Click on Create function.
+![Screenshot 2023-05-24 at 11 25 26 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/e5a4fbd6-7319-4f09-a95b-b965a6901f53)
 
 i. Scroll down to the Code source section and replace the existing code in the index.js code editor with the contents of requestUnicorn.js.
 
@@ -331,6 +404,8 @@ For this module you will test the function that you built using the AWS Lambda c
 a. From the main edit screen for your function, select Test and choose Configure test event from the dropdown.
 b. Keep Create new event selected.
 c. Enter TestRequestEvent in the Event name field
+![Screenshot 2023-05-24 at 11 29 04 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/8cb1393f-e557-4b37-9b46-f5975ca9a995)
+
 d. Copy and paste the following test event into the editor:
 
 ```
@@ -360,6 +435,8 @@ e. Choose Save.
 f. On the main function edit screen click Test with TestRequestEvent selected in the dropdown.
 g. Scroll to the top of the page and expand the Details section of the Execution result section.
 h. Verify that the execution succeeded and that the function result looks like the following:
+![Screenshot 2023-05-24 at 11 33 36 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/60ae17b9-ffb6-4536-a26d-9d2fc964dbfa)
+
 
 ```
 {
@@ -388,9 +465,17 @@ This module will focus on the steps required to build the cloud components of th
 ## Step 1: Create a New REST API
 
 a. In the AWS Management Console, click Services then select API Gateway under Application Services.
+![Screenshot 2023-05-24 at 11 33 36 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/b69f3894-48a0-40d1-a598-f311f996be86)
+
+a. In the AWS Management Console, click Services then select API Gateway under Application Services.
 b. Choose Create API. Underneath the Create new API section, make sure New API is selected.
 c. Select Build under REST API and enter WildRydes for the API Name.
-d. Choose Edge optimized in the Endpoint Type dropdown. Note: Edge optimized are best for public services being accessed from the Internet. Regional endpoints are typically used for APIs that are accessed primarily from within the same AWS Region.
+![Screenshot 2023-05-24 at 11 37 35 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/35ed423b-c229-49cf-8a48-5416efe55b53)
+
+d. Choose Edge optimized in the Endpoint Type dropdown. 
+![Screenshot 2023-05-24 at 11 37 35 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/929a9f8f-462d-46ed-b670-a8aa13e80dc7)
+
+Note: Edge optimized are best for public services being accessed from the Internet. Regional endpoints are typically used for APIs that are accessed primarily from within the same AWS Region.
 e. Choose Create API
 
 #Step 2: Create a new resource and method
@@ -408,10 +493,14 @@ d. Ensure the Resource Path is set to ride.
 e. Select Enable API Gateway CORS for the resource.
 
 f. Click Create Resource.
+![Screenshot 2023-05-24 at 11 37 35 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/17b8b987-8bd4-4d56-a50e-f2201cde27a3)
+
 
 g. With the newly created /ride resource selected, from the Action dropdown select Create Method.
 
 h. Select POST from the new dropdown that appears, then click the checkmark.
+![Screenshot 2023-05-24 at 11 39 34 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/d19aed19-b431-47ba-b6f1-ed2d2bb07790)
+
 
 i. Select Lambda Function for the integration type.
 
@@ -424,10 +513,14 @@ l. Enter the name of the function you created in the previous module, RequestUni
 m. Choose Save. Please note, if you get an error that your function does not exist, check that the region you selected matches the one you used in the previous module.
 
 n. When prompted to give Amazon API Gateway permission to invoke your function, choose OK.
+![Screenshot 2023-05-24 at 11 41 47 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/0e22e536-f2ef-41d4-a28e-e13e43dab299)
+
 
 o. Choose on the Method Request card.
 
 p. Choose the pencil icon next to Authorization.
+![Screenshot 2023-05-24 at 11 41 47 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/d8ba60d9-ddcc-4817-bf79-7ab7f19def14)
+
 
 q. Select the WildRydes Cognito user pool authorizer from the drop-down list, and click the checkmark icon.
 
@@ -436,9 +529,14 @@ q. Select the WildRydes Cognito user pool authorizer from the drop-down list, an
 From the Amazon API Gateway console, choose Actions, Deploy API. You'll be prompted to create a new stage. You can use prod for the stage name.
 
 a. In the Actions drop-down list select Deploy API.
+![Screenshot 2023-05-24 at 11 43 34 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/7847d05f-11c6-4907-9d78-4401d92760c3)
+
 b. Select [New Stage] in the Deployment stage drop-down list.
 c. Enter prod for the Stage Name.
 d. Choose Deploy.
+e. Note the Invoke URL. You will use it in the next section.
+![Screenshot 2023-05-24 at 11 44 32 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/3c4474fa-c73f-4302-8f4f-18fb21b0cfbb)
+
 e. Note the Invoke URL. You will use it in the next section.
 
 ## Step 4: Update the Website Config
@@ -566,6 +664,8 @@ f. Choose Request Unicorn. You should see a notification in the right sidebar th
 a. In the AWS Management Console choose Services then select AWS Amplify under Mobile.
 
 b. Select the app you created in module 1.
+![Screenshot 2023-05-25 at 12 04 16 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/afa5d44f-81f0-452c-9c92-1325f49319df)
+
 
 c. On the app landing page, choose ‘Actions > Delete app’. Enter ‘delete’ when prompted to confirm, then choose confirm.
 
@@ -578,6 +678,8 @@ b. Choose Manage your User Pools.
 c. Select the WildRydes user pool you created in module 2.
 
 d. Choose Delete Pool in the upper right corner of the page.
+![Screenshot 2023-05-25 at 12 06 01 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/4bfb6db5-3c03-4859-9430-62320ab2d393)
+
 
 e. Type delete and choose Delete Pool when prompted to confirm.
 
@@ -592,6 +694,8 @@ a. In the AWS Management Console, click Services then select Lambda under Comput
 b. Select the RequestUnicorn function you created in module 3.
 
 c. From the Actions drop-down, choose Delete function.
+![Screenshot 2023-05-25 at 12 08 22 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/633f9eb8-e8d4-4fff-a461-051a4d0b2818)
+
 
 d. Enter delete and choose Delete pool when prompted to confirm.
 
@@ -605,6 +709,8 @@ b. Select Roles from the left navigation pane.
 c. Enter WildRydesLambda into the filter box.
 
 d. Select the role you created in Module 3.
+![Screenshot 2023-05-25 at 12 09 23 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/b79f780a-83be-4610-b218-3cd78a07befd)
+
 
 e. Select the Role and choose Delete. Confirm the role name that needs to be deleted by entering WildRydesLambda. Choose Delete role. 
 f. Choose Yes, Delete when prompted to confirm.
@@ -619,6 +725,8 @@ b. Choose Tables in the navigation menu.
 c. Choose the Rides table you created in module 3.
 
 d. Choose Delete at the top right.
+![Screenshot 2023-05-25 at 12 10 05 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/ec7a28a3-854c-4ae4-8402-a9d633d24ad1)
+
 
 e. Leave the checkbox to Delete all CloudWatch alarms for this table selected, enter delete, and choose Delete.
 
@@ -629,6 +737,8 @@ Delete the REST API created in module 4. There is a Delete API option in the Act
 a. In the AWS Management Console, click Services then select API Gateway under Application Services.
 b. Select the API you created in module 4.
 c. Expand the Actions drop-down and choose Delete API.
+![Screenshot 2023-05-25 at 12 11 44 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/886db672-2ead-4179-a35f-fd5eed9ff7cc)
+
 d. Enter the name of your API when prompted and choose Delete API.
 
 5. Delete your Cloudwatch Logs
@@ -640,6 +750,8 @@ b. Choose Logs in the navigation menu.
 c. Select the /aws/lambda/RequestUnicorn log group. If you have many log groups in your account, you can type /aws/lambda/RequestUnicorn into the Filter text box to easily locate the log group.
 d. Choose Delete log group from the Actions drop-down.
 e. Choose Yes, Delete when prompted to confirm.
+![Screenshot 2023-05-25 at 12 15 03 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/7c2e1847-7466-4362-89b0-323962a6d8f9)
+
 f. If you launched any CloudFormation templates to complete a module, repeat steps 3-5 for any log groups which begin with /aws/lambda/wildrydes-webapp.
 
 # Congratulations! You built and terminated a serverless web application using AWS.
