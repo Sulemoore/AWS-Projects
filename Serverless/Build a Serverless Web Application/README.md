@@ -14,7 +14,7 @@ In this beginner friendly tutorial, you will create a simple serverless web appl
 3. Text editor
 
 ## Application architecture:
-Serverless_Architecture.png
+![Serverless_Architecture](https://github.com/Sulemoore/AWS-Projects/assets/101164153/0272f6fb-f234-4457-ba59-19ed26d3b5e4)
 
 ## Tech Stack:
 The application architecture uses;
@@ -42,6 +42,9 @@ This tutorial is divided into five modules. Each module describes a scenario of 
 
 
 # Module 1: Static Web Hosting with Continuous Deployment
+
+![Serverless_Web_App_LP_assets-03 1403870f0fabeb6a11d3e4116092aa6b19b6a924](https://github.com/Sulemoore/AWS-Projects/assets/101164153/17b3920d-cd8e-4e64-8edc-df7282bed56e)
+
 
 In this module, you will configure AWS Amplify to host the static resources for your web application with continuous deployment built in. The Amplify Console provides a git-based workflow for continuous deployment and hosting of full-stack web apps.
 The architecture for this module is straightforward. All of your static web content including HTML, CSS, JavaScript, images, and other files will be managed by AWS Amplify Console. Your end users will then access your site using the public website URL exposed by AWS Amplify Console. You don't need to run any web servers or use other services to make your site available.
@@ -227,6 +230,9 @@ l. If successful you should be redirected to /ride.html. You should see a notifi
 
 ## Module 3: Serverless Service Backend (use AWS Lambda and Amazon DynamoDB to build a backend process for handling requests for your web application)
 
+![Serverless_Web_App_LP_assets_04 76030d61413ff43bd6aa75fbd16e02ad23aec67a](https://github.com/Sulemoore/AWS-Projects/assets/101164153/3177d9f9-9305-4724-926c-5a71e896c1a2)
+
+
 In this module, you will use AWS Lambda and Amazon DynamoDB to build a backend process for handling requests for your web application. The browser application that you deployed in the first module allows users to request that a unicorn be sent to a location of their choice. To fulfill those requests, the JavaScript running in the browser will need to invoke a service running in the cloud.
 
 You will implement a Lambda function that will be invoked each time a user requests a unicorn. The function will select a unicorn from the fleet, record the request in a DynamoDB table, and then respond to the frontend application with details about the unicorn being dispatched.
@@ -367,6 +373,9 @@ h. Verify that the execution succeeded and that the function result looks like t
 ```
 
 ## Module 4: (use Amazon API Gateway to expose the Lambda function you built in the previous module as a RESTful API)
+
+![Serverless_Web_App_LP_assets_05 d1ecdfaab160d7dc00ddbc9e0245fa34b8d8f26b](https://github.com/Sulemoore/AWS-Projects/assets/101164153/8c02efd1-8d9c-4d47-92d2-a244b7e4eec1)
+
 
 In this module, you will use Amazon API Gateway to expose the Lambda function you built in the previous module as a RESTful API. This API will be accessible on the public Internet. It will be secured using the Amazon Cognito user pool you created in the previous module. Using this configuration, you will then turn your statically hosted website into a dynamic web application by adding client-side JavaScript that makes AJAX calls to the exposed APIs.
 
