@@ -44,7 +44,7 @@ For this tutorial, you will need:
 ### Steps
 
 - 👉 [Create custom VPC](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Project-Instructions/Create%20VPC.md)
-- 👉 [Create subnets](https://github.com/Sulemoore/AWS-Projects/tree/master/Compute/Three-Tier%20Web%20App/Project-Instructions) 
+- 👉 [Create subnets](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Project-Instructions/Create%20Subnets.md)
 - 👉 Create Route Tables (1 for each layer)
 - 👉 Create Internet gateway
 - 👉 Create NAT gateway
