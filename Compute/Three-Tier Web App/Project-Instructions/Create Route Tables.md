@@ -3,7 +3,7 @@
 ### Create Web Route Table
 - Name: Web-public-RT
 ```
-1. Associate with Web subnets
+1. Associate with all 3 Web subnets
 2. Add route to Internet gateway
 ```
 
@@ -12,12 +12,14 @@
 ### Create App Route Table
 - Name: App-private-RT
 ```
-1. Add route to NAT Gateway
+1. Associate with all 3 App subnets
+2. Add route to NAT Gateway
 ```
 
 
 ### Create Db Route Table
 - Name: db-private-RT
 ```
-1. Add route to NAT Gateway
+1. Associate with all 3 DB subnets
+2. Add route to NAT Gateway
 ```
