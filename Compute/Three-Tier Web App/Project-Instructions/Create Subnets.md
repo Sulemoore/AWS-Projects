@@ -15,7 +15,7 @@ Name: Web-public-subnet-3
 AZ:   us-east-1c
 CIDR: 10.0.3.0/24
 ```
-- Enable Auto Assign IPV4 Address for Public Subnets
+- Enable Auto Assign Public IPV4 Address for Public Subnets
   
 ![Screenshot 2023-08-29 at 11 20 49 PM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/5086c92b-3f4a-49cd-a324-c64b6d417724)
 
