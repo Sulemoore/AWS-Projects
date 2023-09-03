@@ -54,7 +54,7 @@ For this tutorial, you will need:
 - 1 Jump Server/Bastion Host (in Web subnet 1)
 - 2 php servers (in App subnets 2&3)
 - 👉 Create Keypair
-- 👉 Create Application Loadbalancer
+- 👉 [Create Application Loadbalancer](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Load-Balancer/Create%20Load%20Balancer.md)
 
 ## Step-04:Create the Database Layer
 
