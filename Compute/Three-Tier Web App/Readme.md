@@ -50,9 +50,9 @@ For this tutorial, you will need:
 - 👉 [Create NAT gateway](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Project-Instructions/Create%20NAT%20Gateway.md)
 
 ## Step-03:Create the Application Layer
-- 👉 Create 3 EC2 Instances
-- [1 Jump Server/Bastion Host (in Web subnet 1)
-- 2 php servers (in App subnets 2&3)](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Create-Servers/Bastion%20Host.md)
+- 👉 [Create 3 EC2 Instances](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Create-Servers/Bastion%20Host.md)
+- 1 Jump Server/Bastion Host (in Web subnet 1)
+- 2 php servers (in App subnets 2&3)
 - 👉 Create Keypair
 - 👉 Create Application Loadbalancer
 
