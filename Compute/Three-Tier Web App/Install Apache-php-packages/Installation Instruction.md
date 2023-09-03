@@ -1,3 +1,5 @@
+## Installation should be done on both App servers.
+
 - To ensure that all of your software packages are up to date, perform a quick software update on your instance.
 ```
 sudo yum update -y
