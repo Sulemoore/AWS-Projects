@@ -56,7 +56,11 @@ For this tutorial, you will need:
 - 👉 Create Keypair
 - 👉 [Create Application Loadbalancer](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/Load-Balancer/Create%20Load%20Balancer.md)
 
-## Step-04:Create the Database Layer
+## Step-04:[Create the Database Layer](https://github.com/Sulemoore/AWS-Projects/blob/master/Compute/Three-Tier%20Web%20App/RDS-Database/Create%20DB.md)
+
+- 👉 Create Subnet Group
+- 👉 Create Database
+- 👉Create Security Group
 
 
 
