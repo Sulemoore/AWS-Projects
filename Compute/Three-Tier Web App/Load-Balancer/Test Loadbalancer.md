@@ -1,6 +1,6 @@
 ## Test your Load balancer
 
-_ Change directory to"
+- Change directory to"
 ```
 cd /var/www/html
 ```
