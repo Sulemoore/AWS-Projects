@@ -36,8 +36,8 @@ This layer is also called the data tier. This tier stores all the information re
 This tutorial assumes that you have a basic understanding of Cloud Computing on AWS and basic Linux commands.
 
 For this tutorial, you will need:
-- 👉 An AWS account
-- 👉 Download and install AWS CLI
+- 👉 [An AWS account](https://aws.amazon.com/)
+- 👉 [Download and install AWS CLI](https://aws.amazon.com/cli/)
 
   
 ## Step-02:Create the Web Layer
