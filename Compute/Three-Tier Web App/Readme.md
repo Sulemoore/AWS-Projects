@@ -1,5 +1,6 @@
 # 📌 Build a Three-Tier Web App on AWS
 ## 🎬 Architecture
+![Architecture](https://github.com/Sulemoore/AWS-Projects/assets/101164153/9decd365-8eff-4013-9733-ff466940ae08)
 
 ## Step-01: Introduction
 
