@@ -19,3 +19,9 @@ cat index.html
 - Repeate the same process for App 2 but echo "This is App 2"
   
 ![Screenshot 2023-09-01 at 1 08 10 AM](https://github.com/Sulemoore/AWS-Projects/assets/101164153/bc04dca5-fc98-47a5-ad54-08692cc17c0d)
+
+
+## Testing
+
+- To Test, copy the endpoint address of the load balancer paste into a browser. Append `/index.html` to it and check.
+- Refresh to toggle between the 2 servers.
